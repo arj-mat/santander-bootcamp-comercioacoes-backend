@@ -1,4 +1,4 @@
-package com.santander.bootcamp.comercioacoes.data.dto;
+package com.santander.bootcamp.comercioacoes.data.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
 
@@ -8,7 +8,7 @@ import javax.validation.constraints.NotEmpty;
 import javax.validation.constraints.NotNull;
 import java.time.LocalDate;
 
-public class StockDTO {
+public class StockDTO extends DTOBase<StockDTO> {
     public Long id;
 
     @NotEmpty

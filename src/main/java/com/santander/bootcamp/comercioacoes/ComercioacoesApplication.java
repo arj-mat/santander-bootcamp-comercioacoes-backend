@@ -11,8 +11,6 @@ import org.springframework.context.annotation.Bean;
 public class ComercioacoesApplication {
 
     public static void main(String[] args) {
-        System.out.println( System.getenv( "JDBC_DATABASE_URL" ) );
-
         SpringApplication.run( ComercioacoesApplication.class, args );
     }
 
@@ -21,6 +19,7 @@ public class ComercioacoesApplication {
         return new OpenAPI().info(
                 new Info()
                         .title( "Comércio de Ações API" )
+                        .description( "Mateus Araújo" )
                         .version( "1.0" )
                         .termsOfService( "https://swagger.io/terms" )
                         .license( new License().name( "Apache 2.0" ) )
