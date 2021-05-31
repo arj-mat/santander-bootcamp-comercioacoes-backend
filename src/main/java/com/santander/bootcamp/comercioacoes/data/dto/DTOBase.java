@@ -1,7 +1,6 @@
-package com.santander.bootcamp.comercioacoes.data.model.dto;
+package com.santander.bootcamp.comercioacoes.data.dto;
 
-import com.santander.bootcamp.comercioacoes.data.model.entity.EntityBase;
-import com.santander.bootcamp.comercioacoes.data.mapper.DTOMapper;
+import com.santander.bootcamp.comercioacoes.data.entity.EntityBase;
 
 public class DTOBase<T extends DTOBase> {
     /**

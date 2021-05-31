@@ -1,4 +1,4 @@
-package com.santander.bootcamp.comercioacoes.data.mapper;
+package com.santander.bootcamp.comercioacoes.exceptions;
 
 public class DataMapperException extends RuntimeException {
     public DataMapperException(String message) {

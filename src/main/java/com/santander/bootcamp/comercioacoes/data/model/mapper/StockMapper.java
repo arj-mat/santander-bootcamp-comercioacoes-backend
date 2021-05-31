@@ -3,20 +3,16 @@ package com.santander.bootcamp.comercioacoes.data.model.mapper;
 import com.santander.bootcamp.comercioacoes.data.model.dto.StockDTO;
 import com.santander.bootcamp.comercioacoes.data.model.entity.StockEntity;
 
-import java.time.LocalDate;
-
 public abstract class StockMapper {
-    public static StockDTO EntityToDTO(StockEntity entity) {
+    public static StockDTO FromEntityToDTO(StockEntity entity) {
         return new StockDTO().mapper( entity )
-                             .map( "name", (String name) -> "<B>" + name + "</B>" )
-                             .map( "date", (LocalDate date) -> date.plusYears( 2 ) )
+                             .map( "tags", (String tags) -> tags.split( ";" ) )
                              .copyRemaining();
     }
 
-    public static StockEntity DTOToEntity(StockDTO dto) {
+    public static StockEntity FromDTOToEntity(StockDTO dto) {
         return new StockEntity().mapper( dto )
-                                .map( "name", (String name) -> name.replaceAll( "\\<\\/?B\\>", "" ) )
-                                .map( "date", (LocalDate date) -> date.minusYears( 2 ) )
+                                .map( "tags", (String[] tags) -> String.join( ";", tags ) )
                                 .copyRemaining();
     }
 }

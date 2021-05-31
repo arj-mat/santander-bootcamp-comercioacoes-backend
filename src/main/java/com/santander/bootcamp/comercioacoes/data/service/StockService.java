@@ -28,18 +28,18 @@ public class StockService {
             throw new BusinessException( AppMessages.BUSINESS_EXCEPTION_STOCK_ALREADY_EXISTS );
         }
 
-        StockEntity entity = StockMapper.DTOToEntity( dto );
+        StockEntity entity = StockMapper.FromDTOToEntity( dto );
 
         repository.save( entity );
 
-        return StockMapper.EntityToDTO( entity );
+        return StockMapper.FromEntityToDTO( entity );
     }
 
     @Transactional(readOnly = true)
     public List<StockDTO> getAll() {
         return repository.findAll()
                          .stream()
-                         .map( stockEntity -> StockMapper.EntityToDTO( stockEntity ) )
+                         .map( stockEntity -> StockMapper.FromEntityToDTO( stockEntity ) )
                          .collect( Collectors.toList() );
     }
 
@@ -51,7 +51,7 @@ public class StockService {
                                                id
                                        ) ) );
 
-        return StockMapper.EntityToDTO( entity );
+        return StockMapper.FromEntityToDTO( entity );
     }
 
     @Transactional
@@ -64,6 +64,6 @@ public class StockService {
 
         repository.deleteById( id );
 
-        return StockMapper.EntityToDTO( entity );
+        return StockMapper.FromEntityToDTO( entity );
     }
 }

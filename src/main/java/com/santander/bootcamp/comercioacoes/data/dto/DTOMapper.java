@@ -1,7 +1,7 @@
-package com.santander.bootcamp.comercioacoes.data.mapper;
+package com.santander.bootcamp.comercioacoes.data.dto;
 
-import com.santander.bootcamp.comercioacoes.data.model.dto.DTOBase;
-import com.santander.bootcamp.comercioacoes.data.model.entity.EntityBase;
+import com.santander.bootcamp.comercioacoes.data.entity.EntityBase;
+import com.santander.bootcamp.comercioacoes.exceptions.DataMapperException;
 
 import java.lang.reflect.Field;
 import java.util.ArrayList;

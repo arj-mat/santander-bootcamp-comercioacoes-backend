@@ -1,19 +1,14 @@
-package com.santander.bootcamp.comercioacoes.data.model.entity;
+package com.santander.bootcamp.comercioacoes.data.entity;
 
-import com.santander.bootcamp.comercioacoes.data.mapper.DTOMapper;
-import com.santander.bootcamp.comercioacoes.data.mapper.EntityMapper;
-import com.santander.bootcamp.comercioacoes.data.model.dto.DTOBase;
+import com.santander.bootcamp.comercioacoes.data.dto.DTOBase;
 
 import javax.persistence.Column;
 import javax.persistence.Id;
 import javax.persistence.Table;
 import java.lang.reflect.Field;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 import java.util.function.Function;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import java.util.stream.Collectors;
 
 public class EntityBase<T extends EntityBase> {

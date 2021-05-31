@@ -1,5 +1,7 @@
 package com.santander.bootcamp.comercioacoes.data.model.entity;
 
+import com.santander.bootcamp.comercioacoes.data.entity.EntityBase;
+
 import javax.persistence.*;
 import java.time.LocalDate;
 
@@ -17,4 +19,6 @@ public class StockEntity extends EntityBase<StockEntity> {
     public LocalDate date;
 
     public Double variation;
+
+    public String tags;
 }

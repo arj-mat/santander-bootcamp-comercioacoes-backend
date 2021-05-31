@@ -1,6 +1,7 @@
 package com.santander.bootcamp.comercioacoes.data.model.dto;
 
 import com.fasterxml.jackson.annotation.JsonFormat;
+import com.santander.bootcamp.comercioacoes.data.dto.DTOBase;
 
 import javax.validation.constraints.DecimalMin;
 import javax.validation.constraints.Digits;
@@ -27,4 +28,7 @@ public class StockDTO extends DTOBase<StockDTO> {
     @NotNull
     @Digits(integer = 3, fraction = 2) // Até 999.99
     public Double variation;
+
+    @NotNull
+    public String[] tags;
 }
