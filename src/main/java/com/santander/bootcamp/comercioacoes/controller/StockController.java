@@ -21,6 +21,7 @@ public class StockController {
     @Autowired
     private StockService service;
 
+    @CrossOrigin(origins = "http://localhost:4200")
     @GetMapping(value = "/get/all", produces = MediaType.APPLICATION_JSON_VALUE)
     public ResponseEntity<List<StockDTO>> getIndex() {
         return ResponseEntity
